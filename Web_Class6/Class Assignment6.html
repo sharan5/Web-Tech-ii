@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Programming 2 - Class 6 </title>
+        <script src = "Js\jquery-3.4.1.js"></script>
+        <style>
+	    .red{
+	    color:red}
+	    </style>
+		 <script>
+			$(document).ready(function() {
+			$("#btnclick").click(function(){
+			if($("#Exam1").val()=="")
+			{
+			$("#Exam1").next().text("Enter your number");
+
+			}
+			else {
+			$("#Exam1").next().text("");
+			}
+
+			if($("#Exam2").val()=="")
+			{
+			$("#Exam2").next().text("Enter your number");
+
+			}
+			else {
+			$("#Exam2").next().text("");
+			}
+
+			if($("#Project").val()=="")
+			{
+			$("#Project").next().text("Enter your number");
+
+			}
+			else {
+			$("#Project").next().text("");
+			}
+			var Exam1 =  parseFloat($("#Exam1").val());
+			var Exam2 =  parseFloat($("#Exam2").val());
+			var Project =  parseFloat($("#Project").val());
+
+			var sum = Exam1 + Exam2 + Project/2;
+			$("#out").text(sum);
+
+
+			if(sum>80)
+			{
+			$("#grade").text("A");
+			}
+			else if (sum>=60 && sum<=80)
+			{
+			$("#grade").text("B");
+			}
+			else
+			$("#grade").text("F");
+
+			});
+			});
+        </script>
+    </head>
+    <body>
+
+        <h1>Web Programming 2 - Class 5 </h1>
+		<form id="Exam" name="Exam" >
+			<label for="Exam1">Exam1:</label>
+			<input type="text" id="Exam1">
+			<span class="red" id="one">(1-25)</span><br>
+			<label for="Exam2">Exam2:</label>
+			<input type="text" id="Exam2">
+			<span class="red" id="two">(1-25)</span><br>
+			<label for="Project">Project:</label>
+			<input type="text" id="Project">
+			<span class="red" id="three">(1-100 merge as 50% of your total marks)</span><br>
+			<label for ="percentage">Your final percentage is</label>
+			<span id="out"></span>
+			<label for="per">%</label>
+			<br>
+
+			<label for="grade">Your grade is</label>
+			<span id="grade"></span><br>
+			<input type="button"  id="btnclick"; value="Result">
+		</form>
+    <footer>
+
+    </footer>
+
+</body>
+</html>

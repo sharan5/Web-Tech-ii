@@ -1,0 +1,11 @@
+ header, nav, section, footer{
+     border:1px solid red;
+	 padding:10px;
+	 margin:5px;
+}
+article{
+     border: 1px solid green;
+	 margin:5px;
+	 backgroud-color:yellow;
+}
+	
