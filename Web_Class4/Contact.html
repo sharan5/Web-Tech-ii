@@ -1,0 +1,93 @@
+<HTML>
+    <head>
+	    
+		
+		
+		<style>
+		header, nav, section, footer{
+        border:2px solid blue;
+	    padding:10px;
+	    margin:5px;
+        }
+        article{
+        border: 3px solid green;
+	    margin:5px;
+	    background-color:grey;
+        }
+		</style>
+		<script>
+		    function doSomething()
+			{
+			
+			   var textboxvalue = document.getElementById("totalnumber").value;
+			   console.log(textboxvalue);
+			   
+			   document.getElementById("outputvalue").innerHTML=textboxvalue;
+			   
+			     if(textboxvalue>90)
+				 {
+			     document.getElementById("outputvalue").innerHTML="gradeA";
+				 }
+				 else if (textboxvalue>=80 && textboxvalue>=70)
+				 {
+				 document.getElementById("outputvalue").innerHTML="gradeB";
+				 }
+				 else if (textboxvalue<60 && textboxvalue>=30)
+				 {
+				 document.getElementById("outputvalue").innerHTML="gradeC";
+				 }
+				 else
+				 {
+				 document.getElementById("outputvalue").innerHTML="gradeD";
+				 }
+				 
+			   var a = 10;
+			   var b = 13;
+			   var v = a + b; 
+			   
+			   console.log(v);
+			   
+			   var p = 20;
+			   var q = 2;
+			   var r = p * q; 
+			   
+			   console.log(r);
+			   
+			   console.log("I clicked on do Something");
+			   return false;
+			   }
+			
+		</script>
+		 
+		
+</head>
+	<body>
+	     <header>
+		     <h1>This is contact page</h1>
+		 </header>
+		 <nav>
+		     <a href="Example.html">home</a>
+			
+		 </nav>
+			 
+			 <section>
+			     <article>
+				    <form>
+					<p>EnterName: <input type = "text" id ="myname" name="myname" /> <p>
+					<p>Enter total number: <input type = "number" id ="totalnumber" name="totalnumber"/> <p>
+					<p><input type="button" value="Click me"  onclick ="doSomething();"/> </p>
+					
+					
+					<p><div id="outputvalue" name="outputvalue" >hello output</div></p>
+					
+				    </form>
+				 </article>
+				 
+				 
+			</section>
+			
+			<footer>
+			    <p>@cestarcollege.com</p>
+			</footer>
+	</body>
+</HTML>
